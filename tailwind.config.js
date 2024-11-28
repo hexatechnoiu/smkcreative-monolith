@@ -23,6 +23,9 @@ export default {
                     "2xl": "1400px",
                 },
             },
+            boxShadow: {
+                default : "-8px 20px 25px 0 rgba(25, 42, 70, 0.3)"
+            },
             colors: {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
