@@ -4,9 +4,9 @@ import { Head } from "@inertiajs/vue3";
 import { ref } from "vue";
 import { MenuButton, MenuItem, MenuItems, TransitionChild, Menu } from "@headlessui/vue";
 import DashboardLayout from "@/Layouts/DashboardLayout.vue";
-import EditProjectModal from "@/Components/Modal/EditProjectModal.vue";
-import DeleteProjectModal from "@/Components/Modal/DeleteProjectModal.vue";
-import CreateProjectModal from "@/Components/Modal/CreateProjectModal.vue";
+import EditCategoryModal from "@/Components/Modal/EditCategoryModal.vue";
+import DeleteCategoryModal from "@/Components/Modal/DeleteCategoryModal.vue";
+import CreateCategoryModal from "@/Components/Modal/CreateCategoryModal.vue";
 
 const createModalOpen = ref(false);
 const updateModalOpen = ref(false);
@@ -14,10 +14,6 @@ const deleteModalOpen = ref(false);
 
 const sp = ref(null);
 defineProps({
-  projects: {
-    type: Array,
-    required: true,
-  },
   categories: {
     type: Array,
     required: true,
@@ -42,13 +38,13 @@ defineProps({
         </button>
       </div>
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div v-for="project in projects" :key="project.id">
+        <div v-for="category in categories" :key="category.id">
           <div class="rounded-xl border bg-card text-card-foreground shadow dark:bg-white/5 dark:text-indigo-100 dark:border-0">
             <div class="flex flex-col space-y-1.5 p-2">
               <div style="position: relative; width: 100%; padding-bottom: 60%">
                 <div style="position: absolute; inset: 0px">
-                  <img :alt="project.name" loading="lazy" decoding="async" class="rounded-md object-cover"
-                    sizes="100vw" :src="project.photo" style="
+                  <img :alt="category.name" loading="lazy" decoding="async" class="rounded-md object-cover"
+                    sizes="100vw" :src="category.photo" style="
                       position: absolute;
                       height: 100%;
                       width: 100%;
@@ -61,10 +57,10 @@ defineProps({
             <div class="flex justify-between">
               <div class="p-6 pt-0">
                 <h3 class="font-semibold tracking-tight text-lg">
-                  {{ project.name }}
+                  {{ category.name }}
                 </h3>
                 <p class="text-sm text-muted-foreground dark:text-violet-200">
-                  {{ project.category.name }}
+                  {{ category.category.name }}
                 </p>
               </div>
               <Menu as="div" class="relative inline-block text-left px-3">
@@ -88,7 +84,7 @@ defineProps({
                     <div class="px-1 py-1">
                       <MenuItem v-slot="{ active }">
                       <button @click="() => {
-                        sp = project;
+                        sp = category;
                         updateModalOpen = true;
                       }
                         " :class="[
@@ -108,7 +104,7 @@ defineProps({
                       </MenuItem>
                       <MenuItem v-slot="{ active }">
                       <button @click="() => {
-                        sp = project;
+                        sp = category;
                         deleteModalOpen = true;
                       }
                         " :class="[
@@ -133,11 +129,11 @@ defineProps({
         </div>
       </div>
     </div>
-    <EditProjectModal v-if="updateModalOpen" :isOpen="updateModalOpen" :project="sp"
+    <EditCategoryModal v-if="updateModalOpen" :isOpen="updateModalOpen" :category="sp"
       @toggle-modal="(value) => (updateModalOpen = value)" :categories />
-    <DeleteProjectModal v-if="deleteModalOpen" :isOpen="deleteModalOpen" :project="sp"
+    <DeleteCategoryModal v-if="deleteModalOpen" :isOpen="deleteModalOpen" :category="sp"
       @toggle-modal="(value) => (deleteModalOpen = value)" :categories />
-    <CreateProjectModal v-if="createModalOpen" :isOpen="createModalOpen" 
+    <CreateCategoryModal v-if="createModalOpen" :isOpen="createModalOpen" 
       @toggle-modal="(value) => (createModalOpen = value)" :categories />
   </DashboardLayout>
 </template>

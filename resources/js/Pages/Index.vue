@@ -68,7 +68,7 @@ const HandleCategoryClick = async (category) => {
                     <div aria-labelledby="project-category">
                         <div>
                             <div class="overflow-hidden h-11">
-                                <div class="flex gap-4 pb-2 pt-1 overflow-scroll">
+                                <div class="flex gap-4 pb-2 pt-1 overflow-x-scroll">
                                     <div>
                                         <button
                                             class="inline-flex select-none items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow hover:bg-primary/90 hover:text-white h-9 px-4 py-2"

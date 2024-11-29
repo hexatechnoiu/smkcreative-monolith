@@ -8,12 +8,18 @@ export default defineConfig({
             input: 'resources/js/app.js',
             ssr: 'resources/js/ssr.js',
             refresh: true,
+            detectTls: true
         }),
         vue({
             template: {
                 transformAssetUrls: {
                     base: null,
                     includeAbsolute: false,
+                },
+                compilerOptions: {
+                    comments: false,
+                    runtimeGlobalName: "Laravel",
+                    optimizeImports: true
                 },
             },
         }),
