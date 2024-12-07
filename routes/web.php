@@ -41,7 +41,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard.categories');
     Route::get('/dashboard/users', function () {
         return Inertia::render('Dashboard/UnderConstruction');
-    })->name('dashboard.categories');
+    })->name('dashboard.users');
     Route::post('/categories', [CategoriesController::class, 'create'])->name('categories.create');
     Route::put('/categories/{category}', [CategoriesController::class, 'update'])->name('categories.update');
     Route::delete('/categories/{category}', [CategoriesController::class, 'delete'])->name('categories.delete');
