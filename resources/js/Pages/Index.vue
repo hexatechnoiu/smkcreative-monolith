@@ -6,6 +6,9 @@ import Hero from "@/Sections/Hero.vue";
 import { Head, Link } from "@inertiajs/vue3";
 import { ref } from "vue";
 
+document.body.classList.remove(
+    "dark:bg-indigo-950",
+);
 const props = defineProps({
     categories: {
         type: Object,
@@ -47,6 +50,7 @@ const HandleCategoryClick = async (category) => {
 </script>
 
 <template>
+
     <Head title="SMK Negeri 2 Sumedang" />
     <main class="flex flex-col h-screen">
         <Header />
@@ -67,44 +71,33 @@ const HandleCategoryClick = async (category) => {
                     <div aria-labelledby="project-category">
                         <div>
                             <div class="overflow-hidden h-11">
-                                <div
-                                    class="flex gap-4 pb-2 pt-1 overflow-x-scroll"
-                                >
+                                <div class="flex gap-4 pb-2 pt-1 overflow-x-scroll">
                                     <div>
                                         <button
                                             class="inline-flex select-none items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow hover:bg-primary/90 hover:text-white h-9 px-4 py-2"
-                                            @click="HandleCategoryClick('all')"
-                                            :class="
-                                                (currentCategory.name === 'all'
+                                            @click="HandleCategoryClick('all')" :class="(currentCategory.name === 'all'
                                                     ? 'bg-primary text-primary-foreground '
                                                     : '') +
                                                 (loading === 'all'
                                                     ? 'animate-pulse'
                                                     : '')
-                                            "
-                                        >
+                                                ">
                                             All
                                         </button>
                                     </div>
-                                    <div
-                                        v-for="category in categories"
-                                        :key="category.id"
-                                    >
+                                    <div v-for="category in categories" :key="category.id">
                                         <button
                                             class="inline-flex select-none items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow hover:bg-primary/90 h-9 px-4 py-2 border text-primary hover:text-white"
-                                            :class="
-                                                (currentCategory.name ===
-                                                category.name
+                                            :class="(currentCategory.name ===
+                                                    category.name
                                                     ? 'bg-primary text-primary-foreground '
                                                     : '') +
                                                 (loading === category.name
                                                     ? 'animate-pulse'
                                                     : '')
-                                            "
-                                            @click="
+                                                " @click="
                                                 HandleCategoryClick(category)
-                                            "
-                                        >
+                                                ">
                                             {{ category.name }}
                                         </button>
                                     </div>
@@ -112,61 +105,38 @@ const HandleCategoryClick = async (category) => {
                             </div>
                         </div>
                     </div>
-                    <div
-                        aria-labelledby="project-content"
-                        class="transition-all duration-700"
-                        :class="loading !== '' ? 'opacity-5' : ''"
-                    >
+                    <div aria-labelledby="project-content" class="transition-all duration-700"
+                        :class="loading !== '' ? 'opacity-5' : ''">
                         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                            <a
-                                v-for="project in currentCategory.projects"
-                                target="_blank"
-                                :href="project.link"
-                            >
-                                <div
-                                    class="rounded-xl border bg-card text-card-foreground shadow"
-                                >
+                            <a v-for="project in currentCategory.projects" target="_blank" :href="project.link">
+                                <div class="rounded-xl border bg-card text-card-foreground shadow">
                                     <div class="flex flex-col space-y-1.5 p-2">
-                                        <div
-                                            style="
+                                        <div style="
                                                 position: relative;
                                                 width: 100%;
                                                 padding-bottom: 60%;
-                                            "
-                                        >
-                                            <div
-                                                style="
+                                            ">
+                                            <div style="
                                                     position: absolute;
                                                     inset: 0px;
-                                                "
-                                            >
-                                                <img
-                                                    alt="Profile company web NOIU"
-                                                    loading="lazy"
-                                                    decoding="async"
-                                                    class="rounded-md object-cover"
-                                                    sizes="100vw"
-                                                    :src="project.photo"
+                                                ">
+                                                <img alt="Profile company web NOIU" loading="lazy" decoding="async"
+                                                    class="rounded-md object-cover" sizes="100vw" :src="project.photo"
                                                     style="
                                                         position: absolute;
                                                         height: 100%;
                                                         width: 100%;
                                                         inset: 0px;
                                                         color: transparent;
-                                                    "
-                                                />
+                                                    " />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="p-6 pt-0">
-                                        <h3
-                                            class="font-semibold tracking-tight text-lg"
-                                        >
+                                        <h3 class="font-semibold tracking-tight text-lg">
                                             {{ project.name }}
                                         </h3>
-                                        <p
-                                            class="text-sm text-muted-foreground"
-                                        >
+                                        <p class="text-sm text-muted-foreground">
                                             {{ project.category.name }}
                                         </p>
                                     </div>
