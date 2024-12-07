@@ -24,7 +24,7 @@ export default {
                 },
             },
             boxShadow: {
-                default : "-8px 20px 25px 0 rgba(25, 42, 70, 0.3)"
+                default: "-8px 20px 25px 0 rgba(25, 42, 70, 0.3)",
             },
             colors: {
                 border: "hsl(var(--border))",

@@ -19,11 +19,13 @@ class ProjectController extends Controller
             'photo' => 'required|image|max:2048',
         ]);
 
-        $validated['description'] = "";
-        $validated['photo'] = '/storage/' . $request->file('photo')->store('photos', 'public');
+        $validated['description'] = '';
+        $validated['photo'] = '/storage/'.$request->file('photo')->store('photos', 'public');
         Project::create($validated);
+
         return redirect()->back()->with('success', 'Project created successfully.');
     }
+
     public function update(Request $request, Project $project)
     {
         $validated = $request->validate([
@@ -51,13 +53,13 @@ class ProjectController extends Controller
             }
 
             // Handle case for external URLs (log for debugging if needed)
-            if ($project->photo && !str_starts_with($project->photo, '/storage/')) {
+            if ($project->photo && ! str_starts_with($project->photo, '/storage/')) {
                 // Example: Log the unexpected format for manual review
                 Log::warning('Photo URL not deleted as it does not use local storage.', ['photo' => $project->photo]);
             }
 
             // Store the new photo
-            $new_data['photo'] = '/storage/' . $request->file('photo')->store('photos', 'public');
+            $new_data['photo'] = '/storage/'.$request->file('photo')->store('photos', 'public');
         }
 
         // Update the project with new data
@@ -65,7 +67,9 @@ class ProjectController extends Controller
 
         return redirect()->back()->with('success', 'Project updated successfully.');
     }
-    public function delete(Project $project){
+
+    public function delete(Project $project)
+    {
         if ($project->photo && str_starts_with($project->photo, '/storage/')) {
             $local_path = str_replace('/storage/', '', $project->photo);
             Storage::disk('public')->delete($local_path);

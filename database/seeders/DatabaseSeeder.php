@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Project;
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +14,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
+        // \App\Models\User::find(1)->delete();
+        // \App\Models\User::create([
+        //     'name' => "admin",
+        //     "email" => "admin@gmail.com",
+        //     "email_verified_at" => now(),
+        //     "password" => \Illuminate\Support\Facades\Hash::make('rahasia')
+        // ]);
         $data = [
             [
                 'name' => 'Web App',
@@ -26,8 +31,8 @@ class DatabaseSeeder extends Seeder
                     ['name' => 'Malvis Law Firm', 'image' => '/assets/webapp/malvis.png', 'url' => 'https://malvis.co.id/'],
                     ['name' => 'BINX', 'image' => '/assets/webapp/binx.png', 'url' => 'https://gilangjabbar657.wixsite.com/my-site/profil'],
                     ['name' => 'Hamparan permata', 'image' => '/assets/webapp/hamparanpermata.png', 'url' => 'https://hamparanpermatagroup.com/'],
-                    ['name' => 'E-commerce SMKN 2 Sumedang', 'image' => '/assets/webapp/ecommerce.png', 'url' => 'https://pameran.hexatechnoiu.my.id/']
-                ]
+                    ['name' => 'E-commerce SMKN 2 Sumedang', 'image' => '/assets/webapp/ecommerce.png', 'url' => 'https://pameran.hexatechnoiu.my.id/'],
+                ],
             ],
             [
                 'name' => 'Web design',
@@ -36,8 +41,8 @@ class DatabaseSeeder extends Seeder
                     ['name' => 'GAUDIO', 'image' => '/assets/product/gaudio.png', 'url' => 'https://www.figma.com/proto/QvTx7hvCgR4YKo2hGNsaTK/GAUDIO?type=design&node-id=102-467&t=kx50UdkzaxWjd6CH-0&scaling=min-zoom&page-id=66%3A225'],
                     ['name' => 'Coffee shop', 'image' => '/assets/product/coffeeshop.png', 'url' => 'https://www.figma.com/file/YPEJmzzstrFbY4XdmvdIQD/coffe-shop?type=design&node-id=0-1&mode=design'],
                     ['name' => 'Metaverse web design', 'image' => '/assets/product/vrweb.png', 'url' => 'https://www.figma.com/proto/PM695HrWCIU9BaLplZdDyr/DW_SMKN2SUMEDANG_SitiNurFauziah?type=design&node-id=1-16&t=nZSqWv6N7IwOHbOw-0&scaling=min-zoom&page-id=1%3A16'],
-                    ['name' => 'Grojunio', 'image' => '/assets/product/grojunio.png', 'url' => 'https://www.figma.com/proto/H1PAY2zMseOFKEfkf59uEb/ITDRI?node-id=197-575&scaling=scale-down&page-id=0%3A1&starting-point-node-id=197%3A544']
-                ]
+                    ['name' => 'Grojunio', 'image' => '/assets/product/grojunio.png', 'url' => 'https://www.figma.com/proto/H1PAY2zMseOFKEfkf59uEb/ITDRI?node-id=197-575&scaling=scale-down&page-id=0%3A1&starting-point-node-id=197%3A544'],
+                ],
             ],
             [
                 'name' => 'Games',
@@ -50,8 +55,8 @@ class DatabaseSeeder extends Seeder
                     ['name' => 'Block Ninja', 'image' => '/assets/games/blockninja.png', 'url' => 'https://block-ninja.vercel.app/'],
                     ['name' => 'Tic Tac Toe', 'image' => '/assets/games/tictactoe.png', 'url' => 'https://tussle-xo.vercel.app/'],
                     ['name' => 'Tetris', 'image' => '/assets/games/tetris.jpeg', 'url' => 'https://gd.games/instant-builds/6cdfdae3-7edb-4be1-af79-d97b8b26fcad'],
-                    ['name' => 'Cat adventure', 'image' => '/assets/games/catadventure.jpeg', 'url' => 'https://gd.games/instant-builds/b25975a2-6654-4a49-9b8a-32f2312e828c']
-                ]
+                    ['name' => 'Cat adventure', 'image' => '/assets/games/catadventure.jpeg', 'url' => 'https://gd.games/instant-builds/b25975a2-6654-4a49-9b8a-32f2312e828c'],
+                ],
             ],
             [
                 'name' => 'Metaverse',
@@ -63,14 +68,14 @@ class DatabaseSeeder extends Seeder
                     ['name' => 'Mozilla Hub 4', 'image' => '/assets/product/mozhub4.png', 'url' => 'https://hubs.mozilla.com/wqLDmfk'],
                     ['name' => 'Gridas Booth 3D', 'image' => '/assets/product/gridasbooth.png', 'url' => 'https://skfb.ly/oA96D'],
                     ['name' => 'Tefa Booth 3D', 'image' => '/assets/product/tefabooth.png', 'url' => 'https://skfb.ly/oAWEG'],
-                    ['name' => 'Gridas Expo 3D', 'image' => '/assets/product/gridasexpo.png', 'url' => 'https://skfb.ly/oAsUo']
-                ]
+                    ['name' => 'Gridas Expo 3D', 'image' => '/assets/product/gridasexpo.png', 'url' => 'https://skfb.ly/oAsUo'],
+                ],
             ],
             [
                 'name' => 'Animasi',
                 'projects' => [
-                    ['name' => 'Animasi Perkembangan Teknologi', 'image' => '/assets/overview/animation.png', 'url' => 'https://www.youtube.com/watch?v=rJXHf1BhXUg']
-                ]
+                    ['name' => 'Animasi Perkembangan Teknologi', 'image' => '/assets/overview/animation.png', 'url' => 'https://www.youtube.com/watch?v=rJXHf1BhXUg'],
+                ],
             ],
             [
                 'name' => 'Desain & Printing',
@@ -82,9 +87,9 @@ class DatabaseSeeder extends Seeder
                     ['name' => 'One side keychain', 'image' => '/assets/product/onesidekeychain.jpg', 'url' => 'https://pameran.hexatechnoiu.my.id/produk'],
                     ['name' => 'Pin', 'image' => '/assets/product/pin.jpg', 'url' => 'https://pameran.hexatechnoiu.my.id/produk'],
                     ['name' => 'Canvas Totebag', 'image' => '/assets/product/canvastotebag.jpg', 'url' => 'https://pameran.hexatechnoiu.my.id/produk'],
-                    ['name' => 'Short T-Shirt', 'image' => '/assets/product/tshirt.jpg', 'url' => 'https://pameran.hexatechnoiu.my.id/produk']
-                ]
-            ]
+                    ['name' => 'Short T-Shirt', 'image' => '/assets/product/tshirt.jpg', 'url' => 'https://pameran.hexatechnoiu.my.id/produk'],
+                ],
+            ],
 
         ];
 

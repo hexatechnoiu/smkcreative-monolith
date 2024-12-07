@@ -1,16 +1,16 @@
 <script setup>
-import { Head, Link, useForm } from '@inertiajs/vue3';
+import { Head, Link, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
-    name: '',
-    email: '',
-    password: '',
-    password_confirmation: '',
+    name: "",
+    email: "",
+    password: "",
+    password_confirmation: "",
 });
 
 const submit = () => {
-    form.post(route('register'), {
-        onFinish: () => form.reset('password', 'password_confirmation'),
+    form.post(route("register"), {
+        onFinish: () => form.reset("password", "password_confirmation"),
     });
 };
 </script>
@@ -78,7 +78,10 @@ const submit = () => {
                     autocomplete="new-password"
                 />
 
-                <label class="mt-2" :message="form.errors.password_confirmation" />
+                <label
+                    class="mt-2"
+                    :message="form.errors.password_confirmation"
+                />
             </div>
 
             <div class="flex items-center justify-end mt-4">
@@ -89,7 +92,11 @@ const submit = () => {
                     Already registered?
                 </Link>
 
-                <button class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <button
+                    class="ms-4"
+                    :class="{ 'opacity-25': form.processing }"
+                    :disabled="form.processing"
+                >
                     Register
                 </button>
             </div>
