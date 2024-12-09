@@ -5,8 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title inertia>SMKN 2 Sumedang</title>
+    <meta property="og:title" content="TeFa PPLG SMKN 2 Sumedang">
+    <meta name="description"
+        content="Karya terbaik Siswa/Siswi PPLG dari SMK Negeri 2 Sumedang. Mencakup karya Desain dan Printing, Web App serta Games dan Virtual Reality">
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="canonical" href="https://tefa.pplg.smkn2sumedang.sch.id/">
+    <meta property="og:site_name" content="TeFa PPLG SMKN 2 Sumedang">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Karya terbaik Siswa/Siswi PPLG dari SMK Negeri 2 Sumedang. Mencakup karya Desain dan Printing, Web App serta Games dan Virtual Reality">
+    <meta property="og:url" content="https://tefa.pplg.smkn2sumedang.sch.id/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TeFa PPLG SMKN 2 Sumedang">
+    <meta name="twitter:description"
+        content="Karya terbaik Siswa/Siswi PPLG dari SMK Negeri 2 Sumedang. Mencakup karya Desain dan Printing, Web App serta Games dan Virtual Reality">
 
+
+    <title inertia>TeFa PPLG SMKN 2 Sumedang</title>
+    <link type="image/png" sizes="96x96" rel="icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
