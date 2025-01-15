@@ -107,7 +107,7 @@ defineProps({
                             >
                                 <div>
                                     <MenuButton
-                                        class="inline-flex w-full justify-center rounded-full aspect-square p-3 text-sm font-medium text-gray-600 hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+                                        class="inline-flex w-full justify-center rounded-full aspect-square p-3 text-sm font-medium text-gray-600 hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 dark:text-indigo-100"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +157,7 @@ defineProps({
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 -960 960 960"
-                                                        class="mr-2 h-5 w-5 text-gray-600 group-hover:text-violet-100 min-w-6"
+                                                        class="mr-2 h-5 w-5 text-gray-600 dark:text-indigo-100 group-hover:text-violet-100 min-w-6"
                                                         fill="currentColor"
                                                     >
                                                         <path
@@ -190,7 +190,7 @@ defineProps({
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 -960 960 960"
-                                                        class="mr-2 h-5 w-5 text-gray-600 group-hover:text-violet-100 min-w-6"
+                                                        class="mr-2 h-5 w-5 text-gray-600 dark:text-indigo-100 group-hover:text-violet-100 min-w-6"
                                                         fill="currentColor"
                                                     >
                                                         <path

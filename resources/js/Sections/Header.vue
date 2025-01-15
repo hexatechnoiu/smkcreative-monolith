@@ -20,7 +20,7 @@
                     />
                     <div class="hidden leading-4 md:block">
                         <h5 class="text-2xl font-bold text-yellow-300">
-                            RPL PPLG
+                            PPLG
                         </h5>
                         <h5 class="text-xs font-medium">SMKN 2 SUMEDANG</h5>
                     </div>

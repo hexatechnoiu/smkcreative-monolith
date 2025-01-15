@@ -8,10 +8,10 @@
         >
             <div aria-labelledby="content-left">
                 <h1 class="text-3xl md:text-7xl font-bold text-yellow-400">
-                    RPL PPLG
+                    PPLG
                 </h1>
                 <h2 class="text-2xl md:text-5xl font-medium">
-                    SMKN NEGERI 2 SUMEDANG
+                    SMK NEGERI 2 SUMEDANG
                 </h2>
             </div>
             <div

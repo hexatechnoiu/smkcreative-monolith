@@ -15,12 +15,12 @@ class DatabaseSeeder extends Seeder
     {
 
         // \App\Models\User::find(1)->delete();
-        // \App\Models\User::create([
-        //     'name' => "admin",
-        //     "email" => "admin@gmail.com",
-        //     "email_verified_at" => now(),
-        //     "password" => \Illuminate\Support\Facades\Hash::make('rahasia')
-        // ]);
+        \App\Models\User::create([
+            'name' => "admin",
+            "email" => "admin@gmail.com",
+            "email_verified_at" => now(),
+            "password" => \Illuminate\Support\Facades\Hash::make('rahasia')
+        ]);
         $data = [
             [
                 'name' => 'Web App',

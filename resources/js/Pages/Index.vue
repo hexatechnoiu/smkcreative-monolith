@@ -64,7 +64,7 @@ const HandleCategoryClick = async (category) => {
                             <h1 class="text-4xl font-bold">Proyek Kami</h1>
                             <p class="text-muted-foreground">
                                 Temukan berbagai karya menarik hasil karya dari
-                                jurusan RPL / PPLG
+                                jurusan PPLG.
                             </p>
                         </div>
                     </div>

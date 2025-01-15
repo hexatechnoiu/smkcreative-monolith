@@ -14,7 +14,7 @@
                 </div>
                 <p class="pt-4 text-sm">
                     Website dengan representasi nyata dari dedikasi kami dalam
-                    memajang hasil perjalanan kami dalam dunia RPL / PPLG, dari
+                    memajang hasil perjalanan kami dalam dunia PPLG, dari
                     fase perencanaan hingga pencapaian.
                 </p>
             </div>
