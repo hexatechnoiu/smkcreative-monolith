@@ -77,9 +77,9 @@ function formatDate(isoDate) {
               leave-active-class="transition duration-75 ease-in" leave-from-class="transform scale-100 opacity-100"
               leave-to-class="transform scale-95 opacity-0">
               <MenuItems
-                class="absolute z-10 right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                class="absolute z-10 right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-indigo-50 dark:bg-indigo-900  shadow-lg ring-1 ring-black/5 focus:outline-none">
                 <div class="px-1 py-1">
-                  <MenuItem v-slot="{ active }">
+                  <MenuItem v-slot="{ active }" class="dark:text-indigo-50">
                   <button @click="() => {
                     selectedCategory = category;
                     updateModalOpen = true;
@@ -92,14 +92,14 @@ function formatDate(isoDate) {
                     ]">
                     <i :active="active" class="" aria-hidden="true" />
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                      class="mr-2 h-5 w-5 text-gray-600 dark:text-indigo-100 group-hover:text-violet-100 min-w-6" fill="currentColor">
+                      class="mr-2 h-5 w-5 dark:text-indigo-100 group-hover:text-violet-100 min-w-6" fill="currentColor">
                       <path
                         d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
                     </svg>
                     Edit
                   </button>
                   </MenuItem>
-                  <MenuItem v-slot="{ active }">
+                  <MenuItem v-slot="{ active }" class="dark:text-indigo-50">
                   <button @click="() => {
                     selectedCategory = category;
                     deleteModalOpen = true;
@@ -110,7 +110,7 @@ function formatDate(isoDate) {
                     ]">
                     <i :active="active" class="" aria-hidden="true" />
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                      class="mr-2 h-5 w-5 text-gray-600 dark:text-indigo-100 group-hover:text-violet-100 min-w-6" fill="currentColor">
+                      class="mr-2 h-5 w-5 dark:text-indigo-100 group-hover:text-violet-100 min-w-6" fill="currentColor">
                       <path
                         d="m376-300 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Zm-96 180q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520Zm-400 0v520-520Z" />
                     </svg>

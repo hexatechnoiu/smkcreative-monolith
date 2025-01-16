@@ -15,7 +15,7 @@ defineProps({
             { 'bg-indigo-300  hover:bg-indigo-300 dark:bg-white/20': active },
             { 'hover:bg-indigo-200': !active },
         ]">
-            <slot />
+            <slot/>
             <span class="flex-1 ms-3 whitespace-nowrap">{{ name }}</span>
         </a>
     </li>

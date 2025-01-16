@@ -27,10 +27,10 @@
                         leave-to="opacity-0 scale-95"
                     >
                         <DialogPanel
-                            class="w-full max-w-md inline-flex flex-col gap-5 transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
+                            class="w-full max-w-md inline-flex flex-col gap-5 transform overflow-hidden rounded-2xl bg-indigo-50 dark:bg-indigo-950 p-6 text-left align-middle shadow-xl transition-all"
                         >
                             <div
-                                class="aspect-square text-red bg-red-600/25 text-red-600 rounded-full p-5 inline-flex justify-center items-center self-center"
+                                class="aspect-square text-red bg-red-600/25 dark:bg-red-400/15 text-red-600 dark:text-red-400 rounded-full p-5 inline-flex justify-center items-center self-center"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -45,20 +45,20 @@
                             </div>
                             <DialogTitle
                                 as="h3"
-                                class="text-lg text-center font-bold leading-6 text-gray-900"
+                                class="text-lg text-center font-bold leading-6 text-indigo-900 dark:text-indigo-50"
                             >
                                 Delete Category
                             </DialogTitle>
-                            <p class="text-center">
+                            <p class="text-center dark:text-indigo-200">
                                 You're going to delete the
-                                <span class="bg-gray-200 p-0.5 rounded-md">{{
+                                <span class="bg-indigo-200 dark:bg-indigo-800 p-0.5 rounded-md">{{
                                     category.name
                                 }}</span>
                                 category. Are you sure?
                             </p>
                             <div class="flex gap-4">
                                 <button
-                                    class="w-full rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-300 focus:outline-none"
+                                    class="w-full rounded-md bg-indigo-200 dark:bg-indigo-900 dark:hover:bg-indigo-800 dark:text-indigo-50 px-4 py-2 text-sm font-medium text-indigo-900 hover:bg-indigo-300 focus:outline-none"
                                     @click="closeModal"
                                 >
                                     No, Keep It.
