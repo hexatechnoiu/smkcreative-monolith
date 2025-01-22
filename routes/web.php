@@ -52,9 +52,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/categories/{category}', [CategoriesController::class, 'delete'])->name('categories.delete');
 });
 
-Route::get('/', fn() => Inertia::render('IndexV2', ['projects' => Project::all(), 'categories' => Category::all()]))->name('landingv2');
-Route::get('/profile', fn() => Inertia::render('UnderConstruction'))->name('profile');
-Route::get('/service-program', fn() => Inertia::render('UnderConstruction'))->name('programs');
+Route::get('/', fn() => Inertia::render('V2/Index'))->name('landingv2');
+Route::get('/profile', fn() => Inertia::render('V2/Profil'))->name('profile');
+Route::get('/service-program', fn() => Inertia::render('V2/ProgramDanLayanan', ['projects' => Project::all(), 'categories' => Category::all()]))->name('programs');
 Route::get('/contact-us', fn() => Inertia::render('UnderConstruction'))->name('contact');
 Route::get('/gallery', fn() => Inertia::render('UnderConstruction'))->name('gallery');
 Route::get('/activities', fn() => Inertia::render('UnderConstruction'))->name('activities');

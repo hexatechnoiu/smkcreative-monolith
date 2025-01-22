@@ -95,6 +95,7 @@
 </head>
 
 <body class="font-sans antialiased min-h-screen">
+    @inertia
     <noscript>
         <div class="container">
             <header class="text-center py-4">
@@ -120,7 +121,6 @@
             </footer>
         </div>
     </noscript>
-    @inertia
 </body>
 
 </html>

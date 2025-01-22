@@ -12,11 +12,9 @@ document.body.classList.remove(
 const props = defineProps({
     categories: {
         type: Object,
-        required: true,
     },
     projects: {
         type: Object,
-        required: true,
     },
 });
 const loading = ref("");
@@ -76,8 +74,8 @@ const HandleCategoryClick = async (category) => {
                                         <button
                                             class="inline-flex select-none items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow hover:bg-primary/90 hover:text-white h-9 px-4 py-2"
                                             @click="HandleCategoryClick('all')" :class="(currentCategory.name === 'all'
-                                                    ? 'bg-primary text-primary-foreground '
-                                                    : '') +
+                                                ? 'bg-primary text-primary-foreground '
+                                                : '') +
                                                 (loading === 'all'
                                                     ? 'animate-pulse'
                                                     : '')
@@ -89,15 +87,15 @@ const HandleCategoryClick = async (category) => {
                                         <button
                                             class="inline-flex select-none items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 shadow hover:bg-primary/90 h-9 px-4 py-2 border text-primary hover:text-white"
                                             :class="(currentCategory.name ===
-                                                    category.name
-                                                    ? 'bg-primary text-primary-foreground '
-                                                    : '') +
+                                                category.name
+                                                ? 'bg-primary text-primary-foreground '
+                                                : '') +
                                                 (loading === category.name
                                                     ? 'animate-pulse'
                                                     : '')
                                                 " @click="
-                                                HandleCategoryClick(category)
-                                                ">
+                                                    HandleCategoryClick(category)
+                                                    ">
                                             {{ category.name }}
                                         </button>
                                     </div>
