@@ -3,7 +3,7 @@ import UCC from '../Components/UCC.vue';
 </script>
 
 <template>
-    <main class="dark:bg-indigo-950 fixed w-screen h-screen">
+    <main class="bg-white dark:bg-black fixed w-screen h-screen">
         <UCC />
     </main>
 </template>

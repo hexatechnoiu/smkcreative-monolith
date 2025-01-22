@@ -7,18 +7,18 @@ use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Index', [
-        'projects' => Project::all(),
-        'categories' => Category::all(),
-    ]);
-})->name('landing');
+Route::prefix('v1')->group(function () {
+
+    Route::get('/', fn() => Inertia::render('Index', ['projects' => Project::all(), 'categories' => Category::all()]))->name('landing');
+});
+
 Route::get('/projects/{category}', function (Category $category) {
     return response()->json(
         $category->projects,
         200
     );
 })->name('api.category');
+
 Route::get('/projects/', function () {
     return response()->json(Project::all(), 200);
 })->name('api.projects');
@@ -46,22 +46,22 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard/programs', fn() => Inertia::render('Dashboard/UnderConstruction'))->name('dashboard.programs');
     Route::get('/dashboard/partners', fn() => Inertia::render('Dashboard/UnderConstruction'))->name('dashboard.partners');
     Route::get('/dashboard/teachers', fn() => Inertia::render('Dashboard/UnderConstruction'))->name('dashboard.teachers');
-    
+
     Route::post('/categories', [CategoriesController::class, 'create'])->name('categories.create');
     Route::put('/categories/{category}', [CategoriesController::class, 'update'])->name('categories.update');
     Route::delete('/categories/{category}', [CategoriesController::class, 'delete'])->name('categories.delete');
 });
 
-
-Route::group(['prefix' => 'v2'], function () {
-    Route::get('/', fn() => Inertia::render('UnderConstruction'))->name('homev2');
-    Route::get('/profile', fn() => Inertia::render('UnderConstruction'))->name('profile');
-    Route::get('/service-program', fn() => Inertia::render('UnderConstruction'))->name('programs');
-    Route::get('/activities', fn() => Inertia::render('UnderConstruction'))->name('activities');
-    Route::get('/alumni-students', fn() => Inertia  ::render('UnderConstruction'))->name('students');
-    Route::get('/announcement-info', fn() => Inertia::render('UnderConstruction'))->name('infos');
-    Route::get('/collaboration', fn() => Inertia::render('UnderConstruction'))->name('collaboration');
-    Route::get('/contact-us', fn() => Inertia::render('UnderConstruction'))->name('contact'); 
-});
+Route::get('/', fn() => Inertia::render('IndexV2', ['projects' => Project::all(), 'categories' => Category::all()]))->name('landingv2');
+Route::get('/profile', fn() => Inertia::render('UnderConstruction'))->name('profile');
+Route::get('/service-program', fn() => Inertia::render('UnderConstruction'))->name('programs');
+Route::get('/contact-us', fn() => Inertia::render('UnderConstruction'))->name('contact');
+Route::get('/gallery', fn() => Inertia::render('UnderConstruction'))->name('gallery');
+Route::get('/activities', fn() => Inertia::render('UnderConstruction'))->name('activities');
+Route::get('/alumni-students', fn() => Inertia::render('UnderConstruction'))->name('students');
+Route::get('/announcement-info', fn() => Inertia::render('UnderConstruction'))->name('infos');
+Route::get('/collaboration', fn() => Inertia::render('UnderConstruction'))->name('collaboration');
+// Route::group(['prefix' => 'v2'], function () {
+// });
 
 require __DIR__ . '/auth.php';

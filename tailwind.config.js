@@ -15,6 +15,8 @@ export default {
             fontFamily: {
                 sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
                 mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
+                jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
+                caveat: ["Caveat", "cursive"],
             },
             container: {
                 center: true,
@@ -60,6 +62,9 @@ export default {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))",
                 },
+                "pplg-yellow": "#FFF200",
+                "pplg-blue": "#0F172A",
+                "pplg-yellow-darken": "#FACC15",
             },
             borderRadius: {
                 lg: "var(--radius)",
