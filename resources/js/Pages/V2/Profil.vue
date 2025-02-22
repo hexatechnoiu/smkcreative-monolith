@@ -9,7 +9,7 @@ import V2Layout from '@/Layouts/V2Layout.vue';
         <div class="px-[5vw] font-jakarta min-h-screen">
             <Navbar />
 
-            <section class="grid grid-cols-2 space-x-4 gap-10">
+            <section class="grid sm:grid-cols-2 my-10 sm:y-0 space-x-4 gap-10">
                 <div>
                     <img src="assets/Profil.svg" alt="" class="h-[72vh]">
                 </div>

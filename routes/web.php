@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ProjectController;
 use App\Models\Category;
 use App\Models\Project;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -54,7 +55,21 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::get('/', fn() => Inertia::render('V2/Index'))->name('landingv2');
 Route::get('/profile', fn() => Inertia::render('V2/Profil'))->name('profile');
-Route::get('/service-program', fn() => Inertia::render('V2/ProgramDanLayanan', ['projects' => Project::all(), 'categories' => Category::all()]))->name('programs');
+
+
+Route::get('/service-program', function () {
+    try {
+        $projects = Project::all();
+        $categories = Category::all();
+    } catch (\Exception $e) {
+        Log::error('Database error: ' . $e->getMessage());
+        $projects = [];
+        $categories = [];
+    }
+    return Inertia::render('V2/ProgramDanLayanan', ['projects' => $projects, 'categories' => $categories]);
+})->name('programs');
+
+
 Route::get('/contact-us', fn() => Inertia::render('UnderConstruction'))->name('contact');
 Route::get('/gallery', fn() => Inertia::render('UnderConstruction'))->name('gallery');
 Route::get('/activities', fn() => Inertia::render('UnderConstruction'))->name('activities');

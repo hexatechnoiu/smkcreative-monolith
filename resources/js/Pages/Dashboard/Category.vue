@@ -77,7 +77,7 @@ function formatDate(isoDate) {
               leave-active-class="transition duration-75 ease-in" leave-from-class="transform scale-100 opacity-100"
               leave-to-class="transform scale-95 opacity-0">
               <MenuItems
-                class="absolute z-10 right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-indigo-50 dark:bg-indigo-900  shadow-lg ring-1 ring-black/5 focus:outline-none">
+                class="menu-items">
                 <div class="px-1 py-1">
                   <MenuItem v-slot="{ active }" class="dark:text-indigo-50">
                   <button @click="() => {
@@ -102,7 +102,7 @@ function formatDate(isoDate) {
                   <MenuItem v-slot="{ active }" class="dark:text-indigo-50">
                   <button @click="() => {
                     selectedCategory = category;
-                    deleteModalOpen = true;
+                  deleteModalOpen = true;
                   }
                     " :class="[
                       active ? 'bg-red-500 text-white' : 'text-gray-900',

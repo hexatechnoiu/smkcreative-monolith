@@ -7,9 +7,9 @@ const showMenu = ref(false);
 
 <template>
     <nav
-        class="flex items-center z-50 backdrop-blur-sm justify-between flex-wrap py-4 sticky top-0 bg-white/85  px-[5vw] mx-[-5vw]">
+        class="flex items-center z-50 backdrop-blur-sm justify-between sm:flex-wrap py-4 sticky top-0 bg-white/85 px-[5vw] w-screen mx-[-5vw]">
         <img draggable="false" src="assets/Logo PPLG.svg" class="h-16" alt="Logo PPLG" />
-        <ul class="flex items-center gap-10">
+        <ul class="flex flex-col sm:flex-row items-center sm:gap-10 gap-2">
             <li>
                 <a href="/" class="text-black hover:text-pplg-yellow duration-[400ms]">Beranda</a>
             </li>

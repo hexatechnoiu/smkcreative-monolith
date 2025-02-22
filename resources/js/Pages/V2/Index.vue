@@ -2,7 +2,7 @@
     <V2Layout>
         <main class="px-[5vw] font-jakarta">
             <Navbar />
-            <header class="flex justify-between mt-12">
+            <header class="flex flex-col sm:flex-row justify-between mt-12">
                 <div class="w-1/2 flex flex-col items-start justify-center">
                     <h1 class="text-5xl font-bold mb-4">
                         Pengembangan Perangkat <br />Lunak dan Gim <br />SMKN 2 Sumedang
@@ -18,13 +18,13 @@
                         Jelajahi
                     </a>
                 </div>
-                <div class="w-1/2 flex justify-end">
+                <div class="sm:w-1/2 flex justify-end">
                     <img draggable="false" src="assets/Aktor.svg" alt="Aktor" class="h-[60vh]" />
                 </div>
             </header>
 
-            <section class="flex justify-between mt-52 scroll-m-32" id="tentang">
-                <div class="w-1/2">
+            <section class="flex flex-col sm:flex-row justify-between mt-52 scroll-m-32" id="tentang">
+                <div class="sm:w-1/2">
                     <h3 class="font-caveat text-pplg-yellow-darken text-3xl font-bold">Tentang</h3>
                     <h1 class="text-3xl font-bold mb-4">Teaching Factory PPLG</h1>
                     <p class="text-md">
@@ -36,7 +36,7 @@
                         di kelas dan kebutuhan keterampilan di dunia kerja.
                     </p>
                 </div>
-                <div class="w-1/2 flex justify-end">
+                <div class="sm:w-1/2 flex justify-center sm:justify-end">
                     <img draggable="false" src="assets/About.svg" alt="" class="h-[45vh]" />
                 </div>
             </section>
@@ -49,8 +49,8 @@
                     <h1 class="text-3xl font-bold ml-10">Teaching Factory</h1>
                 </div>
 
-                <div class="flex gap-2 justify-between">
-                    <div class="flex items-center gap-4 flex-col w-1/4">
+                <div class="flex gap-2 flex-col sm:flex-row justify-between">
+                    <div class="flex items-center gap-4 flex-col sm:w-1/4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52"
                             fill="currentColor" class="mx-auto">
                             <g clip-path="url(#clip0_37_102)">
@@ -70,8 +70,8 @@
                             yang relevan dengan kebutuhan industri.
                         </div>
                     </div>
-                    <img draggable="false" src="assets/Arrow 1.svg" alt="" class="h-6 mt-4" />
-                    <div class="flex items-center gap-4 flex-col w-1/4 pt-10">
+                    <img draggable="false" src="assets/Arrow 1.svg" class="hidden sm:inline-flex select-none sm:h-6 sm:mt-4" />
+                    <div class="flex items-center gap-4 flex-col sm:w-1/4 pt-10">
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52"
                             fill="currentColor">
                             <g clip-path="url(#clip0_37_114)">
@@ -91,8 +91,8 @@
                             hasil proyek sesuai dengan standar profesional.
                         </div>
                     </div>
-                    <img draggable="false" src="assets/Arrow 2.svg" alt="" class="h-6 mt-20" />
-                    <div class="flex items-center gap-4 flex-col w-1/4">
+                    <img draggable="false" src="assets/Arrow 2.svg" class="hidden sm:inline-flex select-none sm:h-6 sm:mt-20" />
+                    <div class="flex items-center gap-4 flex-col sm:w-1/4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52"
                             fill="currentColor">
                             <g clip-path="url(#clip0_37_108)">
@@ -118,11 +118,11 @@
             </section>
 
             <section class="bg-pplg-blue mx-[-5vw] mt-28 pb-12 text-white relative">
-                <div class="flex gap-12">
+                <div class="flex gap-12 flex-col sm:flex-row">
                     <div class="flex flex-col justify-start">
                         <img draggable="false" src="assets/Keunggulan.svg" alt="" class="w-full" />
                     </div>
-                    <div class="xl:w-full">
+                    <div class="xl:w-full px-10 sm:px-0">
                         <h1 class="font-semibold text-4xl pt-9 pb-7">Keunggulan Program</h1>
                         <hr class="opacity-50 mb-12" />
                         <ul class="my-2">
@@ -179,20 +179,20 @@
                     </div>
                 </div>
 
-                <div class="flex justify-around mt-12 px-[10vw]">
-                    <div class="flex p-2 flex-col gap-2 justify-center items-center w-1/4 border-r">
+                <div class="flex justify-around mt-12 px-[10vw] flex-wrap sm:flex-nowrap gap-6 sm:gap-0">
+                    <div class="flex p-2 flex-col gap-2 justify-center items-center sm:w-1/4 sm:border-r">
                         <p class="text-5xl font-bold">100+</p>
                         <p class="text-xl">Project Selesai</p>
                     </div>
-                    <div class="flex p-2 flex-col gap-2 justify-center items-center w-1/4 border-r">
+                    <div class="flex p-2 flex-col gap-2 justify-center items-center sm:w-1/4 sm:border-r">
                         <p class="text-5xl font-bold">12</p>
                         <p class="text-xl">Mitra Industri</p>
                     </div>
-                    <div class="flex p-2 flex-col gap-2 justify-center items-center w-1/4 border-r">
+                    <div class="flex p-2 flex-col gap-2 justify-center items-center sm:w-1/4 sm:border-r">
                         <p class="text-5xl font-bold">144</p>
                         <p class="text-xl">Siswa Berprestasi</p>
                     </div>
-                    <div class="flex p-2 flex-col gap-2 justify-center items-center w-1/4">
+                    <div class="flex p-2 flex-col gap-2 justify-center items-center sm:w-1/4">
                         <p class="text-5xl font-bold">140</p>
                         <p class="text-xl">Serapan Kerja</p>
                     </div>
@@ -208,8 +208,8 @@
                     <h1 class="text-3xl font-bold mb-16">Testimoni Siswa dan Alumni</h1>
                 </div>
 
-                <div class="flex justify-between gap-10">
-                    <div class="w-1/4 space-y-4 ">
+                <div class="flex flex-wrap md:flex-nowrap justify-between gap-10">
+                    <div class="sm:w-1/4 space-y-4">
                         <div class="flex gap-4">
                             <img draggable="false" src="assets/testimonies/aisyah.jpg" alt="" class="rounded-full h-14" />
                             <div class="text-lg">
@@ -221,7 +221,7 @@
                             Selama belajar di sini, saya mendapatkan banyak ilmu dan pengalaman berharga. Para guru di sini juga sangat mendukung dan selalu siap membantu, membuat saya merasa siap untuk melanjutkan studi dan berkarier di dunia teknologi.
                         </div>
                     </div>
-                    <div class="w-1/4 space-y-4">
+                    <div class="sm:w-1/4 space-y-4">
                         <div class="flex gap-4">
                             <img draggable="false" src="assets/irfan-sholeh.webp" alt="" class="rounded-full h-14" />
                             <div class="text-lg">
@@ -237,7 +237,7 @@
                             pekerjaan ataupun di bangku perkuliahan.
                         </div>
                     </div>
-                    <div class="w-1/4 space-y-4">
+                    <div class="sm:w-1/4 space-y-4">
                         <div class="flex gap-4">
                             <img draggable="false" src="assets/irfan-sholeh.webp" alt="" class="rounded-full h-14" />
                             <div class="text-lg">
@@ -257,7 +257,7 @@
             </section>
 
             <footer class="bg-pplg-blue pt-12 px-16 mt-20 text-white -mx-[5vw]">
-                <div class="flex w-full justify-between">
+                <div class="flex w-full justify-between flex-wrap md:flex-nowrap">
                     <div class="flex flex-col">
                         <img draggable="false" src="" alt="" />
                         <p class="text-xl font-semibold">

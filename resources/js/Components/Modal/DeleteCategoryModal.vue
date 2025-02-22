@@ -27,7 +27,7 @@
                         leave-to="opacity-0 scale-95"
                     >
                         <DialogPanel
-                            class="w-full max-w-md inline-flex flex-col gap-5 transform overflow-hidden rounded-2xl bg-indigo-50 dark:bg-indigo-950 p-6 text-left align-middle shadow-xl transition-all"
+                            class="w-full max-w-md inline-flex flex-col gap-5 transform overflow-hidden rounded-2xl modal-color p-6 text-left align-middle shadow-xl transition-all"
                         >
                             <div
                                 class="aspect-square text-red bg-red-600/25 dark:bg-red-400/15 text-red-600 dark:text-red-400 rounded-full p-5 inline-flex justify-center items-center self-center"

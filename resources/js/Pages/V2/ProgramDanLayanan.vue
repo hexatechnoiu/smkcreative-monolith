@@ -19,16 +19,16 @@ const props = defineProps({
             <Navbar />
 
             <section>
-                <div class="grid grid-cols-11">
+                <div class="grid grid-cols-1 sm:grid-cols-11">
 
-                    <div class="col-span-5">
+                    <div class="sm:col-span-5">
                         <div class="mb-8">
                             <h1 class="text-3xl font-semibold mb-3">Pengembangan Perangkat Lunak</h1>
                             <p>Membekali siswa dengan keterampilan teknis dan manajerial dalam pengembangan perangkat
                                 lunak, mulai dari tahap perancangan hingga implementasi dan pemeliharaan.</p>
                         </div>
 
-                        <div class="flex flex-col justify-center bg-pplg-blue p-7 mb-6 rounded-3xl text-white w-[70vh]">
+                        <div class="flex flex-col justify-center bg-pplg-blue p-7 mb-6 rounded-3xl text-white sm:w-[70vh]">
                             <h5 class="text-md font-semibold mb-3">Proyek yang Dikembangkan</h5>
                             <div class="flex justify-between">
                                 <div class="space-y-1">
@@ -81,11 +81,11 @@ const props = defineProps({
                         </div>
                     </div>
 
-                    <div class="col-span-1 flex justify-center">
+                    <div class="sm:col-span-1 flex justify-center">
                         <div class="w-[1px] h-full bg-black opacity-30"></div>
                     </div>
 
-                    <div class="col-span-5">
+                    <div class="sm:col-span-5">
                         <div class="mb-8">
                             <h1 class="text-2xl font-semibold mb-3">Komponen Pembelajaran</h1>
                         </div>
@@ -225,9 +225,9 @@ const props = defineProps({
             </section>
 
             <section class="my-28">
-                <div class="grid grid-cols-11">
+                <div class="grid sm:grid-cols-11">
 
-                    <div class="col-span-5">
+                    <div class="sm:col-span-5">
                         <div class="mb-8">
                             <h1 class="text-2xl font-semibold mb-3">Komponen Pembelajaran</h1>
                         </div>
@@ -341,14 +341,14 @@ const props = defineProps({
                         <div class="w-[1px] h-full bg-black opacity-30"></div>
                     </div>
 
-                    <div class="col-span-5">
+                    <div class="sm:col-span-5">
                         <div class="mb-8">
                             <h1 class="text-3xl font-semibold mb-3">Pengembangan Gim</h1>
                             <p>Melatih siswa untuk menciptakan gim interaktif, kreatif, dan fungsional, baik untuk
                                 hiburan maupun edukasi.</p>
                         </div>
 
-                        <div class="flex flex-col justify-center bg-pplg-blue p-7 mb-6 rounded-3xl text-white w-[70vh]">
+                        <div class="flex flex-col justify-center bg-pplg-blue p-7 mb-6 rounded-3xl text-white sm:w-[70vh]">
                             <h5 class="text-md font-semibold mb-3">Proyek Gim Unggulan</h5>
                             <div class="flex justify-between">
                                 <div class="space-y-1">
